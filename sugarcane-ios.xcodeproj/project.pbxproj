@@ -8,22 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		294230661FA70F2B0030F503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294230651FA70F2B0030F503 /* AppDelegate.swift */; };
-		294230681FA70F2B0030F503 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294230671FA70F2B0030F503 /* ViewController.swift */; };
 		2942306B1FA70F2B0030F503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294230691FA70F2B0030F503 /* Main.storyboard */; };
 		2942306E1FA70F2B0030F503 /* sugarcane_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2942306C1FA70F2B0030F503 /* sugarcane_ios.xcdatamodeld */; };
 		294230701FA70F2B0030F503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2942306F1FA70F2B0030F503 /* Assets.xcassets */; };
 		294230731FA70F2B0030F503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294230711FA70F2B0030F503 /* LaunchScreen.storyboard */; };
+		2942307E1FA7155B0030F503 /* WarningCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2942307D1FA7155B0030F503 /* WarningCenter.storyboard */; };
+		294230801FA715BC0030F503 /* Knowledge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2942307F1FA715BC0030F503 /* Knowledge.storyboard */; };
+		294230821FA715D60030F503 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294230811FA715D60030F503 /* Question.storyboard */; };
+		294230841FA715F60030F503 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294230831FA715F60030F503 /* User.storyboard */; };
+		E9A435A364B8E14E9E9B1194 /* Pods_sugarcane_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AABB7DE90D37D5C331EE8 /* Pods_sugarcane_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		294230621FA70F2B0030F503 /* sugarcane-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sugarcane-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294230651FA70F2B0030F503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		294230671FA70F2B0030F503 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2942306A1FA70F2B0030F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2942306D1FA70F2B0030F503 /* sugarcane_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sugarcane_ios.xcdatamodel; sourceTree = "<group>"; };
 		2942306F1FA70F2B0030F503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		294230721FA70F2B0030F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		294230741FA70F2B0030F503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2942307D1FA7155B0030F503 /* WarningCenter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WarningCenter.storyboard; sourceTree = "<group>"; };
+		2942307F1FA715BC0030F503 /* Knowledge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Knowledge.storyboard; sourceTree = "<group>"; };
+		294230811FA715D60030F503 /* Question.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
+		294230831FA715F60030F503 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		ABD62BB06A2511474974CF9E /* Pods-sugarcane-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sugarcane-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sugarcane-ios/Pods-sugarcane-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		C46347F623250ACFFF6F3A54 /* Pods-sugarcane-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sugarcane-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-sugarcane-ios/Pods-sugarcane-ios.release.xcconfig"; sourceTree = "<group>"; };
+		CD2AABB7DE90D37D5C331EE8 /* Pods_sugarcane_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sugarcane_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A435A364B8E14E9E9B1194 /* Pods_sugarcane_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				294230641FA70F2B0030F503 /* sugarcane-ios */,
 				294230631FA70F2B0030F503 /* Products */,
+				9F3A8E9D525DA7F301A678B6 /* Pods */,
+				EE2D54F63617D227F79DB18B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +69,59 @@
 		294230641FA70F2B0030F503 /* sugarcane-ios */ = {
 			isa = PBXGroup;
 			children = (
-				294230651FA70F2B0030F503 /* AppDelegate.swift */,
-				294230671FA70F2B0030F503 /* ViewController.swift */,
-				294230691FA70F2B0030F503 /* Main.storyboard */,
-				2942306F1FA70F2B0030F503 /* Assets.xcassets */,
-				294230711FA70F2B0030F503 /* LaunchScreen.storyboard */,
-				294230741FA70F2B0030F503 /* Info.plist */,
-				2942306C1FA70F2B0030F503 /* sugarcane_ios.xcdatamodeld */,
+				2942307A1FA7115E0030F503 /* Classes */,
+				2942307C1FA714C80030F503 /* Storyboard */,
+				2942307B1FA712A50030F503 /* Support */,
 			);
 			path = "sugarcane-ios";
+			sourceTree = "<group>";
+		};
+		2942307A1FA7115E0030F503 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				294230651FA70F2B0030F503 /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2942307B1FA712A50030F503 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				294230741FA70F2B0030F503 /* Info.plist */,
+				2942306C1FA70F2B0030F503 /* sugarcane_ios.xcdatamodeld */,
+				2942306F1FA70F2B0030F503 /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		2942307C1FA714C80030F503 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				294230691FA70F2B0030F503 /* Main.storyboard */,
+				2942307D1FA7155B0030F503 /* WarningCenter.storyboard */,
+				2942307F1FA715BC0030F503 /* Knowledge.storyboard */,
+				294230811FA715D60030F503 /* Question.storyboard */,
+				294230831FA715F60030F503 /* User.storyboard */,
+				294230711FA70F2B0030F503 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9F3A8E9D525DA7F301A678B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABD62BB06A2511474974CF9E /* Pods-sugarcane-ios.debug.xcconfig */,
+				C46347F623250ACFFF6F3A54 /* Pods-sugarcane-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE2D54F63617D227F79DB18B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD2AABB7DE90D37D5C331EE8 /* Pods_sugarcane_ios.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 294230771FA70F2B0030F503 /* Build configuration list for PBXNativeTarget "sugarcane-ios" */;
 			buildPhases = (
+				8E2F6756734949CD8C00FB1E /* [CP] Check Pods Manifest.lock */,
 				2942305E1FA70F2B0030F503 /* Sources */,
 				2942305F1FA70F2B0030F503 /* Frameworks */,
 				294230601FA70F2B0030F503 /* Resources */,
+				B5086E8578FECE157301A80A /* [CP] Embed Pods Frameworks */,
+				19669611CF1A8A06D2221561 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,11 +188,66 @@
 			files = (
 				294230731FA70F2B0030F503 /* LaunchScreen.storyboard in Resources */,
 				294230701FA70F2B0030F503 /* Assets.xcassets in Resources */,
+				294230821FA715D60030F503 /* Question.storyboard in Resources */,
+				2942307E1FA7155B0030F503 /* WarningCenter.storyboard in Resources */,
+				294230801FA715BC0030F503 /* Knowledge.storyboard in Resources */,
+				294230841FA715F60030F503 /* User.storyboard in Resources */,
 				2942306B1FA70F2B0030F503 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19669611CF1A8A06D2221561 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sugarcane-ios/Pods-sugarcane-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E2F6756734949CD8C00FB1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sugarcane-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5086E8578FECE157301A80A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sugarcane-ios/Pods-sugarcane-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2942305E1FA70F2B0030F503 /* Sources */ = {
@@ -140,7 +255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2942306E1FA70F2B0030F503 /* sugarcane_ios.xcdatamodeld in Sources */,
-				294230681FA70F2B0030F503 /* ViewController.swift in Sources */,
 				294230661FA70F2B0030F503 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +390,7 @@
 		};
 		294230781FA70F2B0030F503 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABD62BB06A2511474974CF9E /* Pods-sugarcane-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +406,7 @@
 		};
 		294230791FA70F2B0030F503 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C46347F623250ACFFF6F3A54 /* Pods-sugarcane-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
