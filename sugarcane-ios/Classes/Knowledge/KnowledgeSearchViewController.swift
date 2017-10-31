@@ -1,24 +1,40 @@
 //
-//  KnowledgeViewController.swift
+//  KnowledgeSearchViewController.swift
 //  sugarcane-ios
 //
-//  Created by Riseplus on 10/30/17.
+//  Created by Riseplus on 10/31/17.
 //  Copyright © 2017 Riseplus. All rights reserved.
 //
 
 import UIKit
 
-class KnowledgeViewController: UIViewController {
+class KnowledgeSearchViewController: UIViewController {
     
     @IBOutlet weak var collectionVIEW: UICollectionView!
+    var resultSearchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setBackgroundWhite()
         collectionVIEW.setBackgroundCollectionWhite()
-        navigationController?.setTitleKnowledgeNavi()
-        navigationController?.setColorKnowledgeNavi()
-        collectionVIEW.registerKnowledgeCell()
+        collectionVIEW.registerKnowledgeSearchCell()
+        
+        resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.hidesNavigationBarDuringPresentation = false
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.searchBarStyle = UISearchBarStyle.prominent
+            controller.searchBar.sizeToFit()
+            controller.searchBar.tintColor = UIColor.white
+            controller.searchBar.barTintColor = UIColor(red:0.16, green:0.54, blue:0.80, alpha:1.0)
+            
+            self.navigationItem.titleView = controller.searchBar
+//            self.navigationItem.searchController = controller
+//            self.navigationItem.hidesSearchBarWhenScrolling = false
+            return controller
+            
+        })()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,20 +43,24 @@ class KnowledgeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-//        self.tabBarController?.tabBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
 
 }
 
-// MARK: - Collection View DelegateFlow Layout
-extension KnowledgeViewController: UICollectionViewDelegateFlowLayout {
-    
+// MARK: - UISearchController
+extension KnowledgeSearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+}
+
+extension KnowledgeSearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
@@ -58,13 +78,13 @@ extension KnowledgeViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension KnowledgeViewController : UICollectionViewDataSource {
-
+extension KnowledgeSearchViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KnowledgeCollectionCell", for: indexPath) as! KnowledgeCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KnowledgeSearchCollectionViewCell", for: indexPath) as! KnowledgeSearchCollectionViewCell
         
         return cell
     }
@@ -72,7 +92,7 @@ extension KnowledgeViewController : UICollectionViewDataSource {
     
 }
 
-extension KnowledgeViewController : UICollectionViewDelegate {
+extension KnowledgeSearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "KnowledgeDetailViewController", sender: nil)
     }

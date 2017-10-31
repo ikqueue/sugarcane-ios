@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293C1D9D1FA72A71006755D7 /* KnowledgeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C1D9B1FA72A71006755D7 /* KnowledgeCollectionCell.swift */; };
+		293C1D9E1FA72A71006755D7 /* KnowledgeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 293C1D9C1FA72A71006755D7 /* KnowledgeCollectionCell.xib */; };
 		294230661FA70F2B0030F503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294230651FA70F2B0030F503 /* AppDelegate.swift */; };
 		2942306B1FA70F2B0030F503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294230691FA70F2B0030F503 /* Main.storyboard */; };
 		2942306E1FA70F2B0030F503 /* sugarcane_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2942306C1FA70F2B0030F503 /* sugarcane_ios.xcdatamodeld */; };
@@ -16,12 +18,28 @@
 		294230801FA715BC0030F503 /* Knowledge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2942307F1FA715BC0030F503 /* Knowledge.storyboard */; };
 		294230821FA715D60030F503 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294230811FA715D60030F503 /* Question.storyboard */; };
 		294230841FA715F60030F503 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294230831FA715F60030F503 /* User.storyboard */; };
-		294230891FA71EBA0030F503 /* UITabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294230881FA71EBA0030F503 /* UITabBarItem.swift */; };
 		2942308C1FA721430030F503 /* KnowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942308B1FA721430030F503 /* KnowledgeViewController.swift */; };
+		2982D4901FA818B900BC9F5E /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D48F1FA818B900BC9F5E /* UICollectionView.swift */; };
+		2982D4921FA81A9B00BC9F5E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D4911FA81A9B00BC9F5E /* UIImageView.swift */; };
+		2982D4941FA8230600BC9F5E /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D4931FA8230600BC9F5E /* UINavigationController.swift */; };
+		2982D4961FA8246F00BC9F5E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D4951FA8246F00BC9F5E /* UIView.swift */; };
+		2982D4981FA82C8B00BC9F5E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D4971FA82C8B00BC9F5E /* UIFont.swift */; };
+		2982D49A1FA82E0500BC9F5E /* KnowledgeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D4991FA82E0500BC9F5E /* KnowledgeSearchViewController.swift */; };
+		2982D49D1FA8344B00BC9F5E /* KnowledgeSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D49B1FA8344B00BC9F5E /* KnowledgeSearchCollectionViewCell.swift */; };
+		2982D49E1FA8344B00BC9F5E /* KnowledgeSearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2982D49C1FA8344B00BC9F5E /* KnowledgeSearchCollectionViewCell.xib */; };
+		2982D4A01FA8374E00BC9F5E /* KnowledgeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D49F1FA8374E00BC9F5E /* KnowledgeDetailViewController.swift */; };
+		2982D4A21FA83CCC00BC9F5E /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D4A11FA83CCC00BC9F5E /* UITableView.swift */; };
+		2982D4A71FA83D5C00BC9F5E /* KnowledgeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D4A51FA83D5C00BC9F5E /* KnowledgeDetailTableViewCell.swift */; };
+		2982D4A81FA83D5C00BC9F5E /* KnowledgeDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2982D4A61FA83D5C00BC9F5E /* KnowledgeDetailTableViewCell.xib */; };
+		2982D4AD1FA859E500BC9F5E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D4AC1FA859E500BC9F5E /* QuestionViewController.swift */; };
+		2982D4B31FA8688F00BC9F5E /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2982D4B11FA8688F00BC9F5E /* QuestionTableViewCell.swift */; };
+		2982D4B41FA8688F00BC9F5E /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2982D4B21FA8688F00BC9F5E /* QuestionTableViewCell.xib */; };
 		E9A435A364B8E14E9E9B1194 /* Pods_sugarcane_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AABB7DE90D37D5C331EE8 /* Pods_sugarcane_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		293C1D9B1FA72A71006755D7 /* KnowledgeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeCollectionCell.swift; sourceTree = "<group>"; };
+		293C1D9C1FA72A71006755D7 /* KnowledgeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeCollectionCell.xib; sourceTree = "<group>"; };
 		294230621FA70F2B0030F503 /* sugarcane-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sugarcane-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294230651FA70F2B0030F503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2942306A1FA70F2B0030F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,8 +51,22 @@
 		294230811FA715D60030F503 /* Question.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
 		294230831FA715F60030F503 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		294230851FA717500030F503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		294230881FA71EBA0030F503 /* UITabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarItem.swift; sourceTree = "<group>"; };
 		2942308B1FA721430030F503 /* KnowledgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeViewController.swift; sourceTree = "<group>"; };
+		2982D48F1FA818B900BC9F5E /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		2982D4911FA81A9B00BC9F5E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		2982D4931FA8230600BC9F5E /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		2982D4951FA8246F00BC9F5E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		2982D4971FA82C8B00BC9F5E /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		2982D4991FA82E0500BC9F5E /* KnowledgeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSearchViewController.swift; sourceTree = "<group>"; };
+		2982D49B1FA8344B00BC9F5E /* KnowledgeSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		2982D49C1FA8344B00BC9F5E /* KnowledgeSearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeSearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		2982D49F1FA8374E00BC9F5E /* KnowledgeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeDetailViewController.swift; sourceTree = "<group>"; };
+		2982D4A11FA83CCC00BC9F5E /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		2982D4A51FA83D5C00BC9F5E /* KnowledgeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2982D4A61FA83D5C00BC9F5E /* KnowledgeDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeDetailTableViewCell.xib; sourceTree = "<group>"; };
+		2982D4AC1FA859E500BC9F5E /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		2982D4B11FA8688F00BC9F5E /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		2982D4B21FA8688F00BC9F5E /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
 		ABD62BB06A2511474974CF9E /* Pods-sugarcane-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sugarcane-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sugarcane-ios/Pods-sugarcane-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		C46347F623250ACFFF6F3A54 /* Pods-sugarcane-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sugarcane-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-sugarcane-ios/Pods-sugarcane-ios.release.xcconfig"; sourceTree = "<group>"; };
 		CD2AABB7DE90D37D5C331EE8 /* Pods_sugarcane_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sugarcane_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		293C1D9A1FA72A1C006755D7 /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				2982D4A31FA83D0A00BC9F5E /* Tableview */,
+				2982D4A41FA83D1600BC9F5E /* CollectionView */,
+			);
+			path = Nib;
+			sourceTree = "<group>";
+		};
 		294230591FA70F2B0030F503 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +127,7 @@
 		2942307A1FA7115E0030F503 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2982D4AB1FA859CA00BC9F5E /* Question */,
 				2942308A1FA720F40030F503 /* Knowledge */,
 				294230651FA70F2B0030F503 /* AppDelegate.swift */,
 			);
@@ -116,7 +158,12 @@
 		294230871FA71E940030F503 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				294230881FA71EBA0030F503 /* UITabBarItem.swift */,
+				2982D4A11FA83CCC00BC9F5E /* UITableView.swift */,
+				2982D48F1FA818B900BC9F5E /* UICollectionView.swift */,
+				2982D4911FA81A9B00BC9F5E /* UIImageView.swift */,
+				2982D4931FA8230600BC9F5E /* UINavigationController.swift */,
+				2982D4951FA8246F00BC9F5E /* UIView.swift */,
+				2982D4971FA82C8B00BC9F5E /* UIFont.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -124,9 +171,58 @@
 		2942308A1FA720F40030F503 /* Knowledge */ = {
 			isa = PBXGroup;
 			children = (
+				293C1D9A1FA72A1C006755D7 /* Nib */,
 				2942308B1FA721430030F503 /* KnowledgeViewController.swift */,
+				2982D4991FA82E0500BC9F5E /* KnowledgeSearchViewController.swift */,
+				2982D49F1FA8374E00BC9F5E /* KnowledgeDetailViewController.swift */,
 			);
 			path = Knowledge;
+			sourceTree = "<group>";
+		};
+		2982D4A31FA83D0A00BC9F5E /* Tableview */ = {
+			isa = PBXGroup;
+			children = (
+				2982D4A51FA83D5C00BC9F5E /* KnowledgeDetailTableViewCell.swift */,
+				2982D4A61FA83D5C00BC9F5E /* KnowledgeDetailTableViewCell.xib */,
+			);
+			path = Tableview;
+			sourceTree = "<group>";
+		};
+		2982D4A41FA83D1600BC9F5E /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				293C1D9B1FA72A71006755D7 /* KnowledgeCollectionCell.swift */,
+				293C1D9C1FA72A71006755D7 /* KnowledgeCollectionCell.xib */,
+				2982D49B1FA8344B00BC9F5E /* KnowledgeSearchCollectionViewCell.swift */,
+				2982D49C1FA8344B00BC9F5E /* KnowledgeSearchCollectionViewCell.xib */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		2982D4AB1FA859CA00BC9F5E /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				2982D4AE1FA8685000BC9F5E /* Nib */,
+				2982D4AC1FA859E500BC9F5E /* QuestionViewController.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		2982D4AE1FA8685000BC9F5E /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				2982D4AF1FA8685A00BC9F5E /* Tableview */,
+			);
+			path = Nib;
+			sourceTree = "<group>";
+		};
+		2982D4AF1FA8685A00BC9F5E /* Tableview */ = {
+			isa = PBXGroup;
+			children = (
+				2982D4B11FA8688F00BC9F5E /* QuestionTableViewCell.swift */,
+				2982D4B21FA8688F00BC9F5E /* QuestionTableViewCell.xib */,
+			);
+			path = Tableview;
 			sourceTree = "<group>";
 		};
 		9F3A8E9D525DA7F301A678B6 /* Pods */ = {
@@ -208,10 +304,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293C1D9E1FA72A71006755D7 /* KnowledgeCollectionCell.xib in Resources */,
+				2982D49E1FA8344B00BC9F5E /* KnowledgeSearchCollectionViewCell.xib in Resources */,
+				2982D4A81FA83D5C00BC9F5E /* KnowledgeDetailTableViewCell.xib in Resources */,
 				294230731FA70F2B0030F503 /* LaunchScreen.storyboard in Resources */,
 				294230701FA70F2B0030F503 /* Assets.xcassets in Resources */,
 				294230821FA715D60030F503 /* Question.storyboard in Resources */,
 				2942307E1FA7155B0030F503 /* WarningCenter.storyboard in Resources */,
+				2982D4B41FA8688F00BC9F5E /* QuestionTableViewCell.xib in Resources */,
 				294230801FA715BC0030F503 /* Knowledge.storyboard in Resources */,
 				294230841FA715F60030F503 /* User.storyboard in Resources */,
 				2942306B1FA70F2B0030F503 /* Main.storyboard in Resources */,
@@ -260,9 +360,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-sugarcane-ios/Pods-sugarcane-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/StretchHeader/StretchHeader.framework",
+				"${BUILT_PRODUCTS_DIR}/XMSegmentedControl/XMSegmentedControl.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StretchHeader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMSegmentedControl.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -276,10 +381,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2982D49D1FA8344B00BC9F5E /* KnowledgeSearchCollectionViewCell.swift in Sources */,
+				2982D4B31FA8688F00BC9F5E /* QuestionTableViewCell.swift in Sources */,
+				2982D4A71FA83D5C00BC9F5E /* KnowledgeDetailTableViewCell.swift in Sources */,
+				2982D4901FA818B900BC9F5E /* UICollectionView.swift in Sources */,
+				2982D4941FA8230600BC9F5E /* UINavigationController.swift in Sources */,
 				2942306E1FA70F2B0030F503 /* sugarcane_ios.xcdatamodeld in Sources */,
+				2982D4A01FA8374E00BC9F5E /* KnowledgeDetailViewController.swift in Sources */,
+				2982D4921FA81A9B00BC9F5E /* UIImageView.swift in Sources */,
 				294230661FA70F2B0030F503 /* AppDelegate.swift in Sources */,
-				294230891FA71EBA0030F503 /* UITabBarItem.swift in Sources */,
+				2982D49A1FA82E0500BC9F5E /* KnowledgeSearchViewController.swift in Sources */,
 				2942308C1FA721430030F503 /* KnowledgeViewController.swift in Sources */,
+				2982D4961FA8246F00BC9F5E /* UIView.swift in Sources */,
+				2982D4AD1FA859E500BC9F5E /* QuestionViewController.swift in Sources */,
+				2982D4A21FA83CCC00BC9F5E /* UITableView.swift in Sources */,
+				293C1D9D1FA72A71006755D7 /* KnowledgeCollectionCell.swift in Sources */,
+				2982D4981FA82C8B00BC9F5E /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

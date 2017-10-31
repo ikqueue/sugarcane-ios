@@ -16,14 +16,142 @@
                     <view key="view" contentMode="scaleToFill" id="l0x-fN-pmr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Htb-WP-Lhd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a6m-68-QfK">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cTb-7G-w6g">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="JeH-c9-SS8" id="U1p-Xo-r2X"/>
+                                    <outlet property="delegate" destination="JeH-c9-SS8" id="WMZ-Q4-9FM"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Htb-WP-Lhd" firstAttribute="trailing" secondItem="RNP-Om-F6B" secondAttribute="trailing" id="Ovj-SC-KFW"/>
+                            <constraint firstItem="Htb-WP-Lhd" firstAttribute="bottom" secondItem="RNP-Om-F6B" secondAttribute="bottom" id="Ybz-fu-eL5"/>
+                            <constraint firstItem="Htb-WP-Lhd" firstAttribute="leading" secondItem="RNP-Om-F6B" secondAttribute="leading" id="hk8-T6-qQs"/>
+                            <constraint firstItem="Htb-WP-Lhd" firstAttribute="top" secondItem="RNP-Om-F6B" secondAttribute="top" id="yvz-pj-aVl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RNP-Om-F6B"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UCi-4F-XTM"/>
+                    <navigationItem key="navigationItem" id="UCi-4F-XTM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="rQy-1I-8eB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="gwS-Qm-Oku">
+                            <connections>
+                                <segue destination="6HJ-Kz-dGR" kind="show" id="UMB-4m-nAi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionVIEW" destination="Htb-WP-Lhd" id="QXV-a8-v4K"/>
+                        <segue destination="V0q-jb-W7z" kind="show" identifier="KnowledgeDetailViewController" id="dBX-hg-mDQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbp-R8-rwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="-188"/>
+            <point key="canvasLocation" x="64.799999999999997" y="-188.45577211394306"/>
+        </scene>
+        <!--Knowledge Detail View Controller-->
+        <scene sceneID="rgT-fx-tNL">
+            <objects>
+                <viewController id="V0q-jb-W7z" customClass="KnowledgeDetailViewController" customModule="sugarcane_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ql-Ql-JYl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SiV-89-izi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="V0q-jb-W7z" id="V2O-xq-bOi"/>
+                                    <outlet property="delegate" destination="V0q-jb-W7z" id="d20-iV-3KS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SiV-89-izi" firstAttribute="top" secondItem="6Sv-eq-pZG" secondAttribute="top" id="L2B-Gh-ARK"/>
+                            <constraint firstItem="6Sv-eq-pZG" firstAttribute="bottom" secondItem="SiV-89-izi" secondAttribute="bottom" id="Odk-rf-hsl"/>
+                            <constraint firstItem="6Sv-eq-pZG" firstAttribute="trailing" secondItem="SiV-89-izi" secondAttribute="trailing" id="TTg-9K-Nul"/>
+                            <constraint firstItem="SiV-89-izi" firstAttribute="leading" secondItem="6ql-Ql-JYl" secondAttribute="leading" id="Wuq-zY-HUv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Sv-eq-pZG"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableVIEW" destination="SiV-89-izi" id="yQP-ze-qFd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zk3-Qg-tOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="518"/>
+        </scene>
+        <!--Knowledge Search View Controller-->
+        <scene sceneID="oLf-bd-GmJ">
+            <objects>
+                <viewController id="6HJ-Kz-dGR" customClass="KnowledgeSearchViewController" customModule="sugarcane_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="68K-lL-d5x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-I5-3GB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7AF-YK-dPZ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="S3p-kE-Hof">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="6HJ-Kz-dGR" id="C1K-EU-0G5"/>
+                                    <outlet property="delegate" destination="6HJ-Kz-dGR" id="Lu5-37-IkE"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GFd-I5-3GB" firstAttribute="leading" secondItem="Y9P-h6-Rda" secondAttribute="leading" id="TtW-mn-aLl"/>
+                            <constraint firstItem="Y9P-h6-Rda" firstAttribute="bottom" secondItem="GFd-I5-3GB" secondAttribute="bottom" id="Ud8-CQ-xj7"/>
+                            <constraint firstItem="GFd-I5-3GB" firstAttribute="top" secondItem="Y9P-h6-Rda" secondAttribute="top" id="bqc-Np-h3G"/>
+                            <constraint firstItem="Y9P-h6-Rda" firstAttribute="trailing" secondItem="GFd-I5-3GB" secondAttribute="trailing" id="qrb-gn-w3Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y9P-h6-Rda"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionVIEW" destination="GFd-I5-3GB" id="ES8-xE-m52"/>
+                        <segue destination="V0q-jb-W7z" kind="show" identifier="KnowledgeDetailViewController" id="n9M-RJ-ShN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qQ9-2O-o3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856.79999999999995" y="-188.45577211394306"/>
         </scene>
         <!--Knowledge-->
         <scene sceneID="nau-mw-ly9">
@@ -46,4 +174,7 @@
             <point key="canvasLocation" x="-684" y="-187"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="n9M-RJ-ShN"/>
+    </inferredMetricsTieBreakers>
 </document>
