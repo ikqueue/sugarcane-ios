@@ -19,7 +19,10 @@ extension UICollectionView {
         let cell = UINib(nibName: "KnowledgeSearchCollectionViewCell", bundle:nil)
         self.register(cell, forCellWithReuseIdentifier: "KnowledgeSearchCollectionViewCell")
     }
-    
+    func registerImageQuestionDetailCollectionViewCell() {
+        let cell = UINib(nibName: "ImageQuestionDetailCollectionViewCell", bundle:nil)
+        self.register(cell, forCellWithReuseIdentifier: "ImageQuestionDetailCollectionViewCell")
+    }
     
     // MARK: - UIEdgeInsetsMake
     func UIEdgeInsetsZero() -> UIEdgeInsets {
@@ -29,10 +32,16 @@ extension UICollectionView {
     func UIEdgeInsetsCell() -> UIEdgeInsets {
         return UIEdgeInsetsMake(10, 10, 10, 10)
     }
+    func ImageUIEdgeInsetsCell() -> UIEdgeInsets {
+        return UIEdgeInsetsMake(5, 5, 5, 5)
+    }
     
     // MARK: - size
     func sizeCell() -> CGSize {
         return CGSize(width: self.frame.size.width/2-15, height: 300)
+    }
+    func sizeImageCell() -> CGSize {
+        return CGSize(width: self.frame.size.width/3-10, height: 70)
     }
     
     // MARK: - Colour

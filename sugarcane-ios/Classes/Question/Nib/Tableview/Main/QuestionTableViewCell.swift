@@ -10,9 +10,15 @@ import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var imageIcon: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        imageIcon.image = UIImage(named: "chat-line")
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

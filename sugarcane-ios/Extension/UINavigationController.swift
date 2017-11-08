@@ -19,6 +19,10 @@ extension UINavigationController {
         navigationBar.topItem?.title = "สอบถามและปรึกษา"
     }
     
+    func setTitleQuestionDetailNavi() -> Void {
+        navigationBar.topItem?.title = "สอบถาม"
+    }
+    
     // MARK: - Color
     func setColorKnowledgeNavi() -> Void {
         navigationBar.barTintColor = UIColor(red:0.16, green:0.54, blue:0.80, alpha:1.0)

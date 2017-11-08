@@ -25,11 +25,13 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="1.3493253373313345"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--User-->
         <scene sceneID="VaY-3o-6tg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p9T-2h-e57" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User" image="avatar" id="nKs-lo-HMZ"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9o7-Th-anc">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -44,4 +46,7 @@
             <point key="canvasLocation" x="-721" y="1"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatar" width="30" height="30"/>
+    </resources>
 </document>

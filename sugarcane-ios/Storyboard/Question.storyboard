@@ -49,17 +49,63 @@
                     <connections>
                         <outlet property="segmentedControl1" destination="BvL-SX-2py" id="daJ-di-JOT"/>
                         <outlet property="tableVIEW" destination="dYk-xF-DS4" id="2A7-pd-GAB"/>
+                        <segue destination="d1v-EM-Z5g" kind="show" identifier="QuestionDetailView" id="Pc6-gP-ZU3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjb-GI-tkO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="197.59999999999999" y="51.724137931034484"/>
         </scene>
+        <!--Question Detail View Controller-->
+        <scene sceneID="B7z-xi-gvY">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="d1v-EM-Z5g" customClass="QuestionDetailViewController" customModule="sugarcane_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="amf-oy-aNG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y6o-Lb-r47">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="d1v-EM-Z5g" id="pHG-kR-i6k"/>
+                                    <outlet property="delegate" destination="d1v-EM-Z5g" id="s2r-a1-pUL"/>
+                                </connections>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FUf-gp-Bbk" customClass="GrowingTextView" customModule="GrowingTextView">
+                                <rect key="frame" x="0.0" y="634" width="375" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y6o-Lb-r47" firstAttribute="top" secondItem="AIp-PU-lO9" secondAttribute="top" id="9eX-Oy-dVf"/>
+                            <constraint firstItem="FUf-gp-Bbk" firstAttribute="trailing" secondItem="AIp-PU-lO9" secondAttribute="trailing" id="GRZ-2Z-11z"/>
+                            <constraint firstItem="FUf-gp-Bbk" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="AIp-PU-lO9" secondAttribute="bottom" id="Tgm-L5-5xd"/>
+                            <constraint firstItem="FUf-gp-Bbk" firstAttribute="leading" secondItem="AIp-PU-lO9" secondAttribute="leading" id="YJr-vf-IjF"/>
+                            <constraint firstItem="Y6o-Lb-r47" firstAttribute="trailing" secondItem="AIp-PU-lO9" secondAttribute="trailing" id="kUA-I5-JBQ"/>
+                            <constraint firstItem="FUf-gp-Bbk" firstAttribute="top" relation="lessThanOrEqual" secondItem="AIp-PU-lO9" secondAttribute="top" constant="570" id="n1V-v9-6rH"/>
+                            <constraint firstItem="Y6o-Lb-r47" firstAttribute="leading" secondItem="AIp-PU-lO9" secondAttribute="leading" id="qQ5-yo-kpf"/>
+                            <constraint firstItem="Y6o-Lb-r47" firstAttribute="bottom" secondItem="AIp-PU-lO9" secondAttribute="bottom" id="uqq-L0-VEv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AIp-PU-lO9"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextView" destination="FUf-gp-Bbk" id="SHY-UO-Lfm"/>
+                        <outlet property="tableVIEW" destination="Y6o-Lb-r47" id="fNs-il-OBO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2NL-Ny-e3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="50.824587706146929"/>
+        </scene>
         <!--Question-->
         <scene sceneID="hbC-YH-wtL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X4B-wk-I2U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Question" id="ifi-Ee-ooe"/>
+                    <tabBarItem key="tabBarItem" title="Question" image="chat" id="ifi-Ee-ooe"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aIU-Rx-sjj">
@@ -76,4 +122,7 @@
             <point key="canvasLocation" x="-470" y="52"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chat" width="30" height="30"/>
+    </resources>
 </document>

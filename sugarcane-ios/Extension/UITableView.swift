@@ -19,6 +19,31 @@ extension UITableView {
         let cell = UINib(nibName: "QuestionTableViewCell", bundle:nil)
         self.register(cell, forCellReuseIdentifier: "QuestionTableViewCell")
     }
+    func registerHotilneTableViewCell() -> Void {
+        let cell = UINib(nibName: "HotilneTableViewCell", bundle:nil)
+        self.register(cell, forCellReuseIdentifier: "HotilneTableViewCell")
+    }
+    func registerAddressTableViewCell() -> Void {
+        let cell = UINib(nibName: "AddressTableViewCell", bundle:nil)
+        self.register(cell, forCellReuseIdentifier: "AddressTableViewCell")
+    }
+    func registerEmailTableViewCell() -> Void {
+        let cell = UINib(nibName: "EmailTableViewCell", bundle:nil)
+        self.register(cell, forCellReuseIdentifier: "EmailTableViewCell")
+    }
+    func registerHeadQuestionDetailTableViewCell() -> Void {
+        let cell = UINib(nibName: "HeadQuestionDetailTableViewCell", bundle:nil)
+        self.register(cell, forCellReuseIdentifier: "HeadQuestionDetailTableViewCell")
+    }
+    func registerDescriptionQuestionDetailTableViewCell() -> Void {
+        let cell = UINib(nibName: "DescriptionQuestionDetailTableViewCell", bundle:nil)
+        self.register(cell, forCellReuseIdentifier: "DescriptionQuestionDetailTableViewCell")
+    }
+    func registerImageQuestionDetailTableViewCell() -> Void {
+        let cell = UINib(nibName: "ImageQuestionDetailTableViewCell", bundle:nil)
+        self.register(cell, forCellReuseIdentifier: "ImageQuestionDetailTableViewCell")
+    }
+    
     // MARK: - Hegiht
     func setHeightCellAutomatic(estimatedRowHeight:CGFloat?) {
         if let temp = estimatedRowHeight {
@@ -29,8 +54,5 @@ extension UITableView {
         self.rowHeight = UITableViewAutomaticDimension
     }
     
-    func UITableViewEdgeInsetsCell() -> UIEdgeInsets {
-        return UIEdgeInsetsMake(10, 10, 10, 10)
-    }
     
 }

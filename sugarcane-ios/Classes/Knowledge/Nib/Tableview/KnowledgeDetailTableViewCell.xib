@@ -8,62 +8,56 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="KnowledgeDetailTableViewCell" rowHeight="190" id="KGk-i7-Jjw" customClass="KnowledgeDetailTableViewCell" customModule="sugarcane_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="KnowledgeDetailTableViewCell" rowHeight="210" id="KGk-i7-Jjw" customClass="KnowledgeDetailTableViewCell" customModule="sugarcane_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LGx-EE-Xs4">
-                        <rect key="frame" x="15" y="40" width="15" height="15"/>
+                        <rect key="frame" x="15" y="40" width="21" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="P8I-oH-URM"/>
-                            <constraint firstAttribute="width" constant="15" id="d6z-hs-7TZ"/>
+                            <constraint firstAttribute="height" constant="21" id="63n-4M-5RP"/>
+                            <constraint firstAttribute="width" constant="21" id="JXn-g2-x9Y"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Detail" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nol-iJ-d5r">
-                        <rect key="frame" x="15" y="70.5" width="290" height="14"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnE-lL-Mdd">
-                        <rect key="frame" x="15" y="15" width="290" height="18"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                        <rect key="frame" x="15" y="15" width="290" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="00/00/0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GO-j8-oyn">
-                        <rect key="frame" x="33" y="41" width="272" height="12"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                        <rect key="frame" x="40" y="44" width="265" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Detail" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nol-iJ-d5r">
+                        <rect key="frame" x="15" y="80" width="290" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Nol-iJ-d5r" firstAttribute="top" secondItem="LGx-EE-Xs4" secondAttribute="bottom" constant="15.5" id="8QU-Nt-NYZ"/>
-                    <constraint firstAttribute="trailing" secondItem="hnE-lL-Mdd" secondAttribute="trailing" constant="15" id="Kpg-om-8zT"/>
-                    <constraint firstAttribute="trailing" secondItem="2GO-j8-oyn" secondAttribute="trailing" constant="15" id="PTx-YF-tS2"/>
-                    <constraint firstItem="LGx-EE-Xs4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="d6E-PS-rRA"/>
-                    <constraint firstAttribute="bottom" secondItem="Nol-iJ-d5r" secondAttribute="bottom" constant="5" id="hDq-C0-q09"/>
-                    <constraint firstItem="Nol-iJ-d5r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hRK-7t-zB0"/>
-                    <constraint firstItem="LGx-EE-Xs4" firstAttribute="top" secondItem="hnE-lL-Mdd" secondAttribute="bottom" constant="7" id="nRy-do-5IC"/>
-                    <constraint firstItem="hnE-lL-Mdd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="pGI-RI-JFT"/>
-                    <constraint firstItem="2GO-j8-oyn" firstAttribute="top" secondItem="hnE-lL-Mdd" secondAttribute="bottom" constant="8" id="rsg-o5-SjH"/>
-                    <constraint firstItem="hnE-lL-Mdd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="u3t-xV-TSq"/>
-                    <constraint firstAttribute="trailing" secondItem="Nol-iJ-d5r" secondAttribute="trailing" constant="15" id="v2Y-5y-pAY"/>
-                    <constraint firstItem="2GO-j8-oyn" firstAttribute="leading" secondItem="LGx-EE-Xs4" secondAttribute="trailing" constant="3" id="xgv-c3-S6V"/>
-                    <constraint firstItem="Nol-iJ-d5r" firstAttribute="top" secondItem="2GO-j8-oyn" secondAttribute="bottom" constant="17.5" id="yEE-Ui-pBS"/>
+                    <constraint firstItem="LGx-EE-Xs4" firstAttribute="top" secondItem="hnE-lL-Mdd" secondAttribute="bottom" constant="1" id="0yy-nm-6A8"/>
+                    <constraint firstAttribute="trailing" secondItem="2GO-j8-oyn" secondAttribute="trailing" constant="15" id="8zK-Xw-fWN"/>
+                    <constraint firstItem="Nol-iJ-d5r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ASH-Th-oTS"/>
+                    <constraint firstItem="hnE-lL-Mdd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="HJx-gQ-JCN"/>
+                    <constraint firstItem="Nol-iJ-d5r" firstAttribute="top" secondItem="LGx-EE-Xs4" secondAttribute="bottom" constant="19" id="OC3-8b-dDo"/>
+                    <constraint firstAttribute="trailing" secondItem="Nol-iJ-d5r" secondAttribute="trailing" constant="15" id="Uog-B1-fNk"/>
+                    <constraint firstItem="LGx-EE-Xs4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Xim-bE-AAd"/>
+                    <constraint firstItem="2GO-j8-oyn" firstAttribute="leading" secondItem="LGx-EE-Xs4" secondAttribute="trailing" constant="4" id="Zjn-vP-boC"/>
+                    <constraint firstItem="Nol-iJ-d5r" firstAttribute="top" secondItem="2GO-j8-oyn" secondAttribute="bottom" constant="19" id="cBG-QN-4sb"/>
+                    <constraint firstAttribute="bottom" secondItem="Nol-iJ-d5r" secondAttribute="bottom" constant="10" id="g4d-EU-cA2"/>
+                    <constraint firstItem="2GO-j8-oyn" firstAttribute="top" secondItem="hnE-lL-Mdd" secondAttribute="bottom" constant="5" id="jDV-6d-HUn"/>
+                    <constraint firstItem="hnE-lL-Mdd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="jgN-LZ-D83"/>
+                    <constraint firstAttribute="trailing" secondItem="hnE-lL-Mdd" secondAttribute="trailing" constant="15" id="ubq-GE-c7J"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -73,7 +67,7 @@
                 <outlet property="setImage" destination="LGx-EE-Xs4" id="Nme-Cz-Vw7"/>
                 <outlet property="titleLabel" destination="hnE-lL-Mdd" id="F9J-T1-UR1"/>
             </connections>
-            <point key="canvasLocation" x="26" y="125"/>
+            <point key="canvasLocation" x="26" y="135"/>
         </tableViewCell>
     </objects>
 </document>

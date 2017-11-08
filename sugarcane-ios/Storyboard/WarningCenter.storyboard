@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="-151.19999999999999" y="142.57871064467767"/>
         </scene>
-        <!--Item-->
+        <!--Warning Center-->
         <scene sceneID="We2-R2-c1f">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZP7-LM-Y4w" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="V4H-bQ-yC9"/>
+                    <tabBarItem key="tabBarItem" title="Warning Center" image="placeholder" id="V4H-bQ-yC9"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IWU-Kv-BpX">
@@ -46,4 +46,7 @@
             <point key="canvasLocation" x="-815" y="143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder" width="30" height="30"/>
+    </resources>
 </document>

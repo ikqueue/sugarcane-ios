@@ -18,27 +18,17 @@ class KnowledgeSearchViewController: UIViewController {
         view.setBackgroundWhite()
         collectionVIEW.setBackgroundCollectionWhite()
         collectionVIEW.registerKnowledgeSearchCell()
-        
-        resultSearchController = ({
-            let controller = UISearchController(searchResultsController: nil)
-            controller.searchResultsUpdater = self
-            controller.hidesNavigationBarDuringPresentation = false
-            controller.dimsBackgroundDuringPresentation = false
-            controller.searchBar.searchBarStyle = UISearchBarStyle.prominent
-            controller.searchBar.sizeToFit()
-            controller.searchBar.tintColor = UIColor.white
-            controller.searchBar.barTintColor = UIColor(red:0.16, green:0.54, blue:0.80, alpha:1.0)
-            
-            self.navigationItem.titleView = controller.searchBar
-//            self.navigationItem.searchController = controller
-//            self.navigationItem.hidesSearchBarWhenScrolling = false
-            return controller
-            
-        })()
+        setUpSearchBar()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = " "
+        navigationItem.backBarButtonItem = backItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +41,46 @@ class KnowledgeSearchViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
 
+    func setUpSearchBar() -> Void {
+        resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.hidesNavigationBarDuringPresentation = false
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.searchBarStyle = UISearchBarStyle.prominent
+            controller.searchBar.sizeToFit()
+            controller.searchBar.placeholder = ""
+            controller.searchBar.tintColor = UIColor.white
+            UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+            
+            if #available(iOS 11.0, *) {
+                controller.searchBar.barTintColor = UIColor.white
+                if let textfield = controller.searchBar.value(forKey: "searchField") as? UITextField {
+                    textfield.textColor = UIColor.blue
+                    if let backgroundview = textfield.subviews.first {
+                        
+                        backgroundview.backgroundColor = UIColor.lightGray
+                        backgroundview.layer.cornerRadius = 10;
+                        backgroundview.clipsToBounds = true;
+                    }
+                }
+                
+                if let navigationbar = self.navigationController?.navigationBar {
+                    navigationbar.barTintColor = UIColor.header()
+                }
+                
+                navigationItem.title = "ค้นหา"
+                navigationItem.searchController = controller
+                navigationItem.hidesSearchBarWhenScrolling = false
+            } else {
+                controller.searchBar.barTintColor = UIColor.white
+                navigationItem.titleView = controller.searchBar
+            }
+            
+            return controller
+            
+        })()
+    }
 }
 
 // MARK: - UISearchController
