@@ -13,29 +13,34 @@ import IQKeyboardManagerSwift
 class QuestionDetailViewController: UIViewController {
 
     @IBOutlet weak var tableVIEW: UITableView!
+    @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var messageTextView: GrowingTextView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var button: UIButton!
+    @IBAction func didSendMessage(_ sender: Any) {
+        messageTextView.text = ""
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        messageTextView.delegate = self
         setupTableView()
+        setupView()
         setupTextView()
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
+        self.addObserverNotificationCenter()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.tabBarController?.tabBar.isHidden = false
+        self.removeObserverNotificationCenter()
     }
     
     func setupTableView() -> Void {
@@ -50,6 +55,11 @@ class QuestionDetailViewController: UIViewController {
         tableVIEW.setHeightCellAutomatic(estimatedRowHeight: 90)
     }
     
+    func setupView() {
+        messageView.layer.borderWidth = 0.5
+        messageView.layer.borderColor = UIColor.gray.cgColor
+    }
+    
     func setupTextView() -> Void {
         messageTextView.maxLength = 1000
         messageTextView.trimWhiteSpaceWhenEndEditing = false
@@ -57,25 +67,56 @@ class QuestionDetailViewController: UIViewController {
         messageTextView.placeHolderColor = UIColor(white: 0.8, alpha: 1.0)
         messageTextView.minHeight = 25.0
         messageTextView.maxHeight = 150.0
-        messageTextView.backgroundColor = UIColor.white
-        messageTextView.layer.cornerRadius = 4.0
-        automaticallyAdjustsScrollViewInsets = false
+        messageTextView.backgroundColor = UIColor.clear
+        messageTextView.layer.cornerRadius = 8.0
+        messageTextView.layer.borderWidth = 1.0
+        messageTextView.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    func addObserverNotificationCenter() {
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(QuestionDetailViewController.keyboardWillShow(_:)),
+            name: NSNotification.Name.UIKeyboardWillShow,
+            object: nil)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(QuestionDetailViewController.keyboardWillHide(_:)),
+            name: NSNotification.Name.UIKeyboardWillHide,
+            object: nil)
+    }
+    
+    func removeObserverNotificationCenter() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        
+        if let userInfo = notification.userInfo {
+            if let keyboardSize = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                bottomConstraint?.constant = keyboardSize.height
+                
+                UIView.animate(withDuration: 0, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                    self.view.layoutIfNeeded()
+                })
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification){
+        bottomConstraint.constant = 0.0
     }
 
 }
 extension QuestionDetailViewController: GrowingTextViewDelegate {
     func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
+        heightViewConstraint.constant = height
         UIView.animate(withDuration: 0) {
             self.view.layoutIfNeeded()
         }
     }
-    func textViewDidChange(_ textView: UITextView) {
-
-    }
-    func textViewDidEndEditing(_ textView: UITextView) {
-
-    }
-
 }
 
 extension QuestionDetailViewController: UITableViewDataSource {

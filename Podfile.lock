@@ -1,0 +1,24 @@
+PODS:
+  - GrowingTextView (0.5.3)
+  - IQKeyboardManagerSwift (5.0.0)
+  - KeyboardHideManager (1.1.0)
+  - StretchHeader (1.1.0)
+  - XMSegmentedControl (0.1.4)
+
+DEPENDENCIES:
+  - GrowingTextView (~> 0.5.3)
+  - IQKeyboardManagerSwift (= 5.0.0)
+  - KeyboardHideManager (~> 1.0)
+  - StretchHeader
+  - XMSegmentedControl
+
+SPEC CHECKSUMS:
+  GrowingTextView: fd5cd2af28d4ba60676bb15186edf3a6b36fa85b
+  IQKeyboardManagerSwift: 3f340202ebe1a7076279b9b9b3c817243ddb3aab
+  KeyboardHideManager: 9b7eedd5c39c96e3f0b54a8fc5481c63b76fee16
+  StretchHeader: 2ae5ef71f07fc7a9e7d9faec69a3b630f0c4383f
+  XMSegmentedControl: 51cf4f3daf14920692a064d9252aa7b29622dda6
+
+PODFILE CHECKSUM: 7ed343f12c90029ea5e257971a17d5f8baf142f5
+
+COCOAPODS: 1.3.1
